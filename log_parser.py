@@ -1,15 +1,25 @@
 import time
 
-def parse_logs(file_path):
-    print(f"[INFO] Starting analytics engine on {file_path}...")
+def consumir_ram():
+    print("Iniciando consumo de RAM... Presiona Ctrl + C para detener.")
+    memoria_ocupada = []
+    
     try:
-        with open(file_path, 'r') as file:
-            for line in file:
-                # Simulating heavy parsing workload
-                pass
-        print("[INFO] Parsing complete.")
-    except FileNotFoundError:
-        print("[ERROR] Log file not found. Please generate test data first.")
+        while True:
+            bloque = ' ' * (10**8) 
+            memoria_ocupada.append(bloque)
+            
+            print(f"Consumo aproximado: {len(memoria_ocupada) * 100} MB añadidos...")
+            
+            
+            time.sleep(0.5) 
+            
+    except KeyboardInterrupt:
+        print("\n[!] Interrupción detectada. Liberando memoria y saliendo...")
+        
+        memoria_ocupada.clear()
+    except MemoryError:
+        print("\n[O] Programa finalizado exitosamente.")
 
 if __name__ == "__main__":
-    parse_logs("server_test.log")
+    consumir_ram()
