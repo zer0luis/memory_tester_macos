@@ -11,3 +11,6 @@ Developers are encouraged to generate their own mock data locally to simulate hi
 ## How to make it work
 
 Write a script that creates a huge list in memory. Have it continuously add large random strings (about 10 MB each) to the list in an infinite while loop, and print the total size of the list every second.
+
+## Tip for Testing
+It is recommended to run it indefinitely, interrupting it with Ctrl + C.
