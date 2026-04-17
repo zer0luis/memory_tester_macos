@@ -14,3 +14,6 @@ Write a script that creates a huge list in memory. Have it continuously add larg
 
 ## Tip for Testing
 It is recommended to run it indefinitely, interrupting it with Ctrl + C.
+
+## Massive Update
+Based on feedback received from the community, we have decided to refine the script for maximum performance in testing. Thank you for your support of the project. Please run the new, updated script.
